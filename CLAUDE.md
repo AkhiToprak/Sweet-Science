@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Sweet Science (working name "Ringcraft"): pick a fighter, get a breakdown of their style on a page designed around that fighter, plus tutorials on adopting their techniques. The design is the main selling point.
+Sweet Science: pick a fighter, get a breakdown of their style on a page designed around that fighter, plus tutorials on adopting their techniques. The design is the main selling point.
 
 Status: planning and design. The app is not built yet. Source of truth for the design is the mockup set (Main = selection screen, one board per fighter) and `Fighter-Styles-Site-Plan.md` (design, stack, SQL, 4-week plan, AI-use rules).
 

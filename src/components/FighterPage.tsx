@@ -26,8 +26,8 @@ function Header({ fighter }: { fighter: Fighter }) {
   return (
     <header className="flex h-[72px] items-center justify-between gap-4 border-b border-line/10 bg-bg px-4 md:px-10">
       <div className="flex items-center gap-7">
-        <Link href="/" className="flex min-h-11 items-center font-[family-name:var(--font-anton)] text-[22px] tracking-[0.14em] md:text-[26px]">
-          RINGCRAFT
+        <Link href="/" className="flex min-h-11 items-center whitespace-nowrap font-[family-name:var(--font-anton)] text-[17px] tracking-[0.12em] md:text-[26px] md:tracking-[0.14em]">
+          SWEET SCIENCE
         </Link>
         <Link href="/" className="label hidden min-h-11 items-center text-[15px] text-muted sm:flex">
           &larr; All fighters
@@ -94,7 +94,7 @@ export function FighterPage({ fighter: f, next }: { fighter: Fighter; next?: Fig
                 </div>
               ))}
             </div>
-            <p className="mb-0 mt-7 text-[14px] text-subtle">Style analysis by Ringcraft. It is an opinion, not a statistic.</p>
+            <p className="mb-0 mt-7 text-[14px] text-subtle">Style analysis by Sweet Science. It is an opinion, not a statistic.</p>
           </Reveal>
         </section>
 

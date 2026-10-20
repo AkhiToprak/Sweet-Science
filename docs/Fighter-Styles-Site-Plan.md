@@ -4,7 +4,7 @@ Oct 19, 2026 · @Toprak
 
 ## Concept and scope
 
-Ringcraft (a working name) is a website where you pick a fighter and get a breakdown of their style on a page designed around that fighter, plus tutorials on how to adopt the techniques that define them. The design is the main selling point, so every fighter page has its own colours, type, motion and layout, all built from one shared system.
+Sweet Science is a website where you pick a fighter and get a breakdown of their style on a page designed around that fighter, plus tutorials on how to adopt the techniques that define them. The design is the main selling point, so every fighter page has its own colours, type, motion and layout, all built from one shared system.
 
 It is for boxing fans and beginners who want to understand how great fighters actually fight, and for recruiters who will judge the project from one demo link.
 
@@ -277,7 +277,7 @@ The biggest risks are content time and video, not code, so check both in the fir
 | Heavy pages feel slow | Big videos and animation hurt performance, especially on phones | Limit video to hero and technique pages, lazy-load embeds, and test with Lighthouse in week 4 |
 | Animation overload | Five motion presets can turn into chaos | Build one preset first, respect reduced motion, and tune the other four after the system works |
 | Scope creep | Every extra fighter or feature delays the demo | Put new ideas on a "later" list until week 4 is done |
-| Name and branding | "Ringcraft" is a working name and may already be used | Search for it before you buy a domain, and switch the name if needed |
+| Name and branding | "Sweet Science" may already be used | Search for it before you buy a domain, and switch the name if needed |
 
 
 > Palette note: colours are inspired by each fighter's trunks in well-known fights, from memory and not verified. Fighter photos are not yet in the mockup: they need Wikimedia Commons files with a checked licence and author, or original silhouettes.

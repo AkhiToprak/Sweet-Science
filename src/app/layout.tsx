@@ -4,7 +4,7 @@ import { fontVariables } from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: { default: "Ringcraft: fight styles, explained", template: "%s · Ringcraft" },
+  title: { default: "Sweet Science: fight styles, explained", template: "%s · Sweet Science" },
   description: "Pick a fighter and get a breakdown of how they fight, on a page designed around that fighter.",
 };
 
