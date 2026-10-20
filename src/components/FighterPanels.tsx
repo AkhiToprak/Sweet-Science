@@ -62,14 +62,15 @@ function Panel({ fighter: f, active, total, onActivate }: { fighter: Fighter; ac
       </div>
 
       {/* Expanded: always shown on phones, on hover or focus on desktop */}
-      <div className="absolute inset-0 transition-opacity duration-500 md:group-data-[active=false]:pointer-events-none md:group-data-[active=false]:opacity-0">
-        <div className="label absolute inset-x-6 top-6 flex justify-between text-[14px] tracking-[0.2em] md:inset-x-9 md:top-7">
+      <div className="absolute inset-0 flex flex-col px-6 py-6 transition-opacity duration-500 md:px-9 md:py-7 md:group-data-[active=false]:pointer-events-none md:group-data-[active=false]:opacity-0">
+        <div className="label flex justify-between text-[14px] tracking-[0.2em]">
           <span>
             {num} / {String(total).padStart(2, "0")}
           </span>
           <span className="max-sm:hidden">Select a fighter</span>
         </div>
-        <div className="absolute inset-x-6 top-16 h-[34%] border border-line/15 md:inset-x-9 md:top-[72px] md:h-[43%]">
+        {/* The clip gets the space left over by the text, so the two never overlap */}
+        <div className="relative mt-5 min-h-[140px] flex-1 border border-line/15">
           <HeroMedia
             videoId={f.heroVideoId}
             start={f.heroStart}
@@ -82,10 +83,10 @@ function Panel({ fighter: f, active, total, onActivate }: { fighter: Fighter; ac
             className={`art-${t.heroLayout}`}
           />
         </div>
-        <div className="absolute inset-x-6 bottom-6 md:inset-x-9 md:bottom-7">
+        <div className="mt-5 shrink-0">
           <div
             className="display fit-name -ml-1"
-            style={{ "--chars": f.displayName.length, "--name-max": "210px", lineHeight: 0.9 } as CSSProperties}
+            style={{ "--chars": f.displayName.length, "--name-max": "170px", lineHeight: 0.9 } as CSSProperties}
           >
             {f.displayName}
           </div>
