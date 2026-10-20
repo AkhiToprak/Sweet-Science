@@ -27,7 +27,7 @@ const tyson: Fighter = {
   heroVideoId: null,
   heroImageUrl: null,
   heroImageCredit: null,
-  hoverClipUrl: null,
+  hoverClipUrl: "/fighters/tyson/hover.mp4",
   position: 1,
   theme: {
     accent: "#D5D9E0",
@@ -100,7 +100,7 @@ const golovkin: Fighter = {
   heroVideoId: null,
   heroImageUrl: null,
   heroImageCredit: null,
-  hoverClipUrl: null,
+  hoverClipUrl: "/fighters/golovkin/hover.mp4",
   position: 2,
   theme: {
     accent: "#E3B23C",
@@ -172,7 +172,7 @@ const bivol: Fighter = {
   heroVideoId: null,
   heroImageUrl: null,
   heroImageCredit: null,
-  hoverClipUrl: null,
+  hoverClipUrl: "/fighters/bivol/hover.mp4",
   position: 3,
   theme: {
     accent: "#2450C8",
@@ -245,7 +245,7 @@ const lomachenko: Fighter = {
   heroVideoId: null,
   heroImageUrl: null,
   heroImageCredit: null,
-  hoverClipUrl: null,
+  hoverClipUrl: "/fighters/lomachenko/hover.mp4",
   position: 4,
   theme: {
     accent: "#FFD500",
@@ -318,7 +318,7 @@ const crawford: Fighter = {
   heroVideoId: null,
   heroImageUrl: null,
   heroImageCredit: null,
-  hoverClipUrl: null,
+  hoverClipUrl: "/fighters/crawford/hover.mp4",
   position: 5,
   theme: {
     accent: "#E8B923",

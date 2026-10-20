@@ -59,7 +59,11 @@ export function HeroMedia({ videoId, start, end, imageUrl, clipUrl, alt, playing
           // eslint-disable-next-line @next/next/no-img-element
           <img src={clipUrl} alt="" className="absolute inset-0 h-full w-full object-cover" />
         ) : (
-          <video src={clipUrl} autoPlay muted loop playsInline aria-hidden="true" className="absolute inset-0 h-full w-full object-cover" />
+          // A .webm with the same name is tried first; browsers fall back to the .mp4.
+          <video autoPlay muted loop playsInline aria-hidden="true" className="absolute inset-0 h-full w-full object-cover">
+            {/\.mp4$/i.test(clipUrl) && <source src={clipUrl.replace(/\.mp4$/i, ".webm")} type="video/webm" />}
+            <source src={clipUrl} />
+          </video>
         ))}
       {!imageUrl && !videoId && !(clipUrl && playing && !reduce) && (
         <div

@@ -13,6 +13,10 @@ The still is used on the fighter hero, the home panel, and as the fallback behin
 
 ## Hover clips
 
-A GIF (or MP4/WebM) that plays while the fighter's home panel is hovered: `hover.gif`, landscape,
-ideally 960 px wide or more. Set `hoverClipUrl: "/fighters/<slug>/hover.gif"`. It only loads on hover
-and does not play for visitors who prefer reduced motion.
+`hover.mp4` plays while the fighter's home panel is hovered or focused (`hoverClipUrl` in
+`src/data/fighters.ts`). It only loads on hover and does not play for visitors who prefer reduced motion.
+GIF also works, but MP4 is about 7x smaller. To convert a GIF:
+
+```bash
+ffmpeg -i in.gif -an -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2,format=yuv420p" -c:v libx264 -crf 22 -movflags +faststart hover.mp4
+```
