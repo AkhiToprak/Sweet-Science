@@ -4,7 +4,18 @@ Pick a fighter and get a breakdown of how they fight, on a page designed around 
 
 The design is the main selling point: every fighter page has its own colours, type, motion and layout, all built from one shared design system.
 
-> **Status:** planning and design. A mockup exists; the app is not built yet.
+> **Status:** the mockups are built: the home selection screen and all five themed fighter pages run from a local data file (`src/data/fighters.ts`). Technique, compare, quiz, login and about pages are placeholders. Supabase is not wired up yet.
+
+## Run it
+
+```bash
+npm install
+npm run dev        # http://localhost:3000
+npm run build      # production build
+npm run typecheck
+```
+
+Design sources: `design/mockups/` (Claude Design boards) and `docs/Fighter-Styles-Site-Plan.md`. Fighter images go in `public/fighters/<slug>/` (see the README there).
 
 ## Features (MVP)
 
