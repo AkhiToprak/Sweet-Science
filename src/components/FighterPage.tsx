@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, type CSSProperties } from "react";
 import type { Fighter, HeroLayout } from "@/data/types";
 import { themeToCssVars } from "@/lib/theme";
+import { ExpandCover } from "./ExpandCover";
 import { Hero } from "./Hero";
 import { Reveal } from "./Reveal";
 import { TraitRadar } from "./TraitRadar";
@@ -48,13 +49,14 @@ function Header({ fighter }: { fighter: Fighter }) {
   );
 }
 
-export function FighterPage({ fighter: f, next }: { fighter: Fighter; next?: Fighter }) {
+export function FighterPage({ fighter: f, next, total }: { fighter: Fighter; next?: Fighter; total: number }) {
   const t = f.theme;
   const [mirrored, setMirrored] = useState(t.mirrored);
 
   return (
     <div data-mirrored={mirrored} style={themeToCssVars(t)} className="min-h-screen bg-bg font-sans text-fg">
       <Header fighter={f} />
+      <ExpandCover fighter={f} total={total} />
       <main>
         <Hero fighter={f} mirrored={mirrored} onStanceChange={setMirrored} />
 

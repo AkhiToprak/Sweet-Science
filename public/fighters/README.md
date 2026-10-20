@@ -14,7 +14,7 @@ The still is used on the fighter hero, the home panel, and as the fallback behin
 ## Hover clips
 
 `hover.mp4` plays while the fighter's home panel is hovered or focused (`hoverClipUrl` in
-`src/data/fighters.ts`). It only loads on hover and does not play for visitors who prefer reduced motion.
+`src/data/fighters.ts`), and loops in the fighter page hero, where it carries the expand transition from the home panel. On the home screen it only loads on hover. It never plays for visitors who prefer reduced motion.
 GIF also works, but MP4 is about 7x smaller. To convert a GIF:
 
 ```bash

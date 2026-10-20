@@ -18,5 +18,5 @@ export default async function Page({ params }: Params) {
   const { slug } = await params;
   const fighter = getFighter(slug);
   if (!fighter) notFound();
-  return <FighterPage fighter={fighter} next={nextFighter(slug)} />;
+  return <FighterPage fighter={fighter} next={nextFighter(slug)} total={fighters.length} />;
 }

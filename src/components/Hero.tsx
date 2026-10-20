@@ -54,7 +54,7 @@ function Eyebrow({ children, className = "" }: { children: ReactNode; className?
 const heroHeight = "h-[560px] md:h-[clamp(600px,52.8vw,760px)]";
 
 function media(f: Fighter, alt = `${f.name} hero clip`) {
-  return { videoId: f.heroVideoId, start: f.heroStart, end: f.heroEnd, imageUrl: f.heroImageUrl, alt };
+  return { videoId: f.heroVideoId, start: f.heroStart, end: f.heroEnd, imageUrl: f.heroImageUrl, clipUrl: f.hoverClipUrl, alt };
 }
 
 function stanceText(f: Fighter) {

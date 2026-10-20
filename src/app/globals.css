@@ -108,6 +108,19 @@
   container-type: inline-size;
 }
 
+/* Registered so they can transition: a home panel's name grows into a hero name
+   and slides up over the clip while the panel expands (FighterPanels). */
+@property --name-max {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 470px;
+}
+@property --overlap {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
 /* Scanline grain */
 .grain {
   background-image: repeating-linear-gradient(0deg, rgb(var(--line) / 0.035) 0, rgb(var(--line) / 0.035) 1px, transparent 1px, transparent 4px);
