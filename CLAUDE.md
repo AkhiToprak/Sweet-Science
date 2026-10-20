@@ -50,7 +50,7 @@ Other pages: technique, compare, find-your-style quiz, account/favourites, about
 
 ## Content and facts rules
 
-- Embed fight footage from YouTube; never download or host it.
+- Embed fight footage from YouTube. Exception (owner decision): short hover GIFs on the home panels are hosted in `public/fighters/<slug>/hover.gif`. Nowhere else hosts footage.
 - Images: Wikimedia Commons with licence and author credit, or original illustrations. No press photos.
 - Only write career facts that can be sourced; list sources on the About page. Style analysis is opinion and is labelled as such.
 - Tutorials cover fundamentals and are not a replacement for a coach.

@@ -76,6 +76,7 @@ export type Fighter = {
   heroEnd?: number;
   heroImageUrl: string | null; // still fallback, e.g. "/fighters/tyson/hero.jpg"
   heroImageCredit: string | null; // author and licence, shown under the hero
+  hoverClipUrl: string | null; // extra: GIF or MP4 that plays while the home panel is hovered
   position: number;
   theme: Theme;
   traits: Traits;

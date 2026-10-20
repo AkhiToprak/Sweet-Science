@@ -7,6 +7,7 @@ type Props = {
   start?: number;
   end?: number;
   imageUrl: string | null;
+  clipUrl?: string | null; // hosted GIF or MP4/WebM, played instead of the YouTube loop
   alt: string;
   playing?: boolean; // false keeps the still (e.g. a home panel that isn't hovered)
   playSize?: number;
@@ -32,9 +33,10 @@ function embedUrl(id: string, start?: number, end?: number) {
 // Fills its parent. Order of preference: muted YouTube loop over the still,
 // the still alone, then the themed placeholder. The still stays underneath the
 // video so a blocked or removed clip still shows something.
-export function HeroMedia({ videoId, start, end, imageUrl, alt, playing = true, playSize = 88, className = "media-placeholder" }: Props) {
+export function HeroMedia({ videoId, start, end, imageUrl, clipUrl, alt, playing = true, playSize = 88, className = "media-placeholder" }: Props) {
   const reduce = useReducedMotion();
-  const showVideo = Boolean(videoId) && playing && !reduce;
+  const showClip = Boolean(clipUrl) && playing && !reduce;
+  const showVideo = Boolean(videoId) && playing && !reduce && !showClip;
 
   return (
     <div className={`absolute inset-0 overflow-hidden ${className}`} style={{ containerType: "size" }}>
@@ -52,7 +54,14 @@ export function HeroMedia({ videoId, start, end, imageUrl, alt, playing = true, 
           style={{ width: "max(100cqw, 177.78cqh)", height: "max(100cqh, 56.25cqw)" }}
         />
       )}
-      {!imageUrl && !videoId && (
+      {showClip && clipUrl &&
+        (/\.gif$/i.test(clipUrl) ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={clipUrl} alt="" className="absolute inset-0 h-full w-full object-cover" />
+        ) : (
+          <video src={clipUrl} autoPlay muted loop playsInline aria-hidden="true" className="absolute inset-0 h-full w-full object-cover" />
+        ))}
+      {!imageUrl && !videoId && !(clipUrl && playing && !reduce) && (
         <div
           aria-hidden="true"
           className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-current"

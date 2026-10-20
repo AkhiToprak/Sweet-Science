@@ -75,6 +75,7 @@ function Panel({ fighter: f, active, total, onActivate }: { fighter: Fighter; ac
             start={f.heroStart}
             end={f.heroEnd}
             imageUrl={f.heroImageUrl}
+            clipUrl={f.hoverClipUrl}
             alt={`${f.name} clip`}
             playing={active}
             playSize={72}
